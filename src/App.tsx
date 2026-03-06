@@ -31,7 +31,7 @@ type TileData = {
 const DEFAULT_TILES: TileData[] = [
   { id: '1', shortText: '好的', fullText: '好的 / 是的', color: 'bg-green-500' },
   { id: '2', shortText: '不行', fullText: '不行 / 不是', color: 'bg-red-500' },
-  { id: '3', shortText: '谢谢', fullText: '非常感谢', color: 'bg-blue-500' },
+  { id: '3', shortText: '多谢', fullText: '非常感谢', color: 'bg-blue-500' },
   { id: '4', shortText: '稍等', fullText: '请稍等一下', color: 'bg-yellow-500' },
   { id: '5', shortText: '帮忙', fullText: '我需要帮忙', color: 'bg-orange-500' },
   { id: '6', shortText: '听不清', fullText: '环境太吵，我听不清', color: 'bg-purple-500' },
@@ -319,7 +319,7 @@ function SortableTile({ tile, isEditMode, onClick, onEdit }: { tile: TileData, i
         duration: 0.4,
         repeat: Infinity,
         repeatType: "mirror" as const,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         repeatDelay: 0.1 + randomDelay
       }
     }
